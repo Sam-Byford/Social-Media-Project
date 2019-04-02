@@ -1,0 +1,36 @@
+#Bio:hover{
+    cursor:pointer;
+}
+#test{
+    color:green;
+}
+#Bio_Div{
+    padding-bottom:150px;
+}
+#info_box{
+    padding-bottom:50px;
+}
+#extension3{
+    width:100%;
+}
+#extension2{
+    width:100%;
+}
+#PPimage:hover {
+    cursor:pointer;
+    opacity: 0.8;
+}
+#actBTN:hover{
+    opacity:0.7;
+}
+#aboutBTN:hover{
+    opacity:0.7;
+}
+#createBTN:hover{
+    opacity:0.7;
+}
+@media only screen and (min-width:1500px){
+    #ProfileContainer{
+         max-width:1588px; 
+    }
+}

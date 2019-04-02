@@ -1,0 +1,11 @@
+@media only screen and (max-width:885px){
+    #EmailHeader{
+        font-size:48px;
+    }
+}
+@media only screen and (max-width:667px){
+    #EmailHeader{
+        font-size:21px;
+        font-weight:600;
+    }
+}
