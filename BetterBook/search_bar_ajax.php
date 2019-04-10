@@ -4,7 +4,7 @@
 
 include_once "database.php";
 $db = new Database();
-$connection = $db->open_connection("id8787309_betterbook_db");
+$connection = $db->open_connection("1153791");
 
 //Getting value of "search" variable from "script.js".
 if (isset($_POST['search'])) {

@@ -15,7 +15,7 @@ class Profile
 	//function to get profile information
 	public function get_profile($user) {
 		$db = new Database();
-		$connection = $db->open_connection("localhost");
+		$connection = $db->open_connection("1153791");
 
 		$findProfile = "SELECT * FROM accounts WHERE email LIKE '%" . $user . "%' LIMIT 1";
 		
@@ -32,7 +32,7 @@ class Profile
 
 	public function updateBio($textUpdate, $userProfile){
 		$db = new Database();
-		$connection = $db->open_connection("localhost");
+		$connection = $db->open_connection("1153791");
 
 		$updateProfile = "UPDATE accounts SET about_text = '" . $textUpdate . "' WHERE email LIKE '%" . $userProfile . "%'";
 		$successUpdate = $db->queryDb($connection, $updateProfile);
@@ -46,7 +46,7 @@ class Profile
 
 	public function get_profile_activity($userProfile) {
 		$db = new Database();
-		$connection = $db->open_connection("localhost");
+		$connection = $db->open_connection("1153791");
 
         //add 'LIMIT' and a number if you wish to have a limit of posts
 		$getUsersPosts = "SELECT * FROM forum_posts WHERE post_author LIKE '%" . $userProfile . "%'";
@@ -62,7 +62,7 @@ class Profile
 
 	public function create_post($titleToPost, $textToPost,$userWhoPosted) {
 		$db = new Database();
-		$connection = $db->open_connection("localhost");
+		$connection = $db->open_connection("1153791");
 
 		$createPostQuery = "INSERT INTO forum_posts (post_title, post_text, post_author, post_date, edit_date) VALUES ('" . $titleToPost . "', '" . $textToPost . "', '" . $userWhoPosted . "', '" . date('Y-m-d H:i:s') . "', '" . date('Y-m-d H:i:s') . "')";
 
@@ -77,7 +77,7 @@ class Profile
 
 	public function uploadPicture($file, $userWhoUploaded) {
 		$db = new Database();
-		$connection = $db->open_connection("localhost");
+		$connection = $db->open_connection("1153791");
 
 		$target_path = "assets/"; 
 		$target_path = $target_path.basename($file["name"]); 

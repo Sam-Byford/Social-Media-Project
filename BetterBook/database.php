@@ -11,7 +11,7 @@ class Database
 	
 	public function open_connection($db) {
 		// Create connection
-		$conn = new mysqli("localhost","localhost","", $db);
+		$conn = new mysqli("localhost","joe","12Oblivion!", $db);
 		// Check connection
 		if ($conn->connect_error) {
 		    die("Connection failed: " . $conn->connect_error);

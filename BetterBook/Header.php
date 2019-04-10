@@ -26,7 +26,7 @@
     <div class="row">
         <!-- Mobile logo, hidden by default -->
         <div class="logo">
-            <img id="menu" src="assets/logo_transparent6.png" alt="logo_menu">
+            <img id="menu" src="assets/logo_transparent.png" alt="logo_menu">
         </div>
         <!-- left side header nav bar -->
         <div class="col" id="links">
@@ -42,7 +42,13 @@
         </div>
         <!-- Logo -->
         <div class="col" id="logo">
-            <a href="home_page.php"><img src="assets/logo_transparent6.png" height="100px" width="100px"></a>
+            <?php
+                if($_SESSION['user_online']) {
+                    echo '<a href="home_page.php"><img src="assets/logo_transparent.png" height="100px" width="100px"></a>';
+                } else {
+                    echo '<a href="index.php"><img src="assets/logo_transparent.png" height="100px" width="100px"></a>';
+                }
+            ?>
         </div>
         <!-- Right side nav and search bar -->
         <div class="col" id="social">

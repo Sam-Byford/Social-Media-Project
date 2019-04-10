@@ -14,7 +14,7 @@ class UserAccess
 	public function login($loginArray) {
 		session_start();
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		$email = isset($loginArray['email_login']) && !empty($loginArray['email_login']) ? $loginArray['email_login'] : null;
         $password = isset($loginArray['password_login']) && !empty($loginArray['password_login']) ? $loginArray['password_login'] : null;
 		$findUsr = "SELECT * FROM accounts WHERE email LIKE '%" . $email . "%' AND password LIKE '%" . sha1($password) . "%'";
@@ -34,7 +34,7 @@ class UserAccess
 	public function register($regArray)  {
 		session_start();
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		
 		$university_selection = isset($regArray['university-selection']) && !empty($regArray['university-selection']) ? $regArray['university-selection'] : null;
 		$course_selection = isset($regArray['course-selection']) && !empty($regArray['course-selection']) ? $regArray['course-selection'] : null;

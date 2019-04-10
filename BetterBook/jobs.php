@@ -129,6 +129,7 @@ else{
             <div class="row">
                         <div class="col-12">
                             <button class="btn btn-primary" onclick="order()" id="searchBTN">Update Results</button>
+                            <button class="btn btn-danger" onclick="clearTxt()" id="clearTxtBtn" style="margin-left:10px;margin-right:30px;"">Clear Results</button>
                         </div>
            			</div>
             <div class="row" id="space10"></div>
@@ -338,6 +339,13 @@ else{
                         document.getElementById("numOfCompanies").innerHTML = comps_array.length;
                     }
                 });
+            }
+            function clearTxt() {
+                var field = document.getElementById("fieBox").innerHTML = "";
+                var type = document.getElementById("typBox").innerHTML = "";
+                var salary = document.getElementById("salBox").innerHTML = "";
+                var location = document.getElementById("locBox").innerHTML = "";
+                var orderBy = document.getElementById("ordBox").innerHTML = "";
             }
         </script>
     <script src="js/jobs_page.js?version=1"></script>

@@ -14,7 +14,7 @@ class ForumCode
 	}
 	public function get_posts() {
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		$getposts = "SELECT * FROM forum_posts LIMIT 5";
 		
 		$result = $db->queryDb($connection, $getposts);
@@ -26,7 +26,7 @@ class ForumCode
 	//currently generic fetch users - will be adapted into 'online users'
 	public function get_users() {
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		$getusers = "SELECT `email` FROM accounts";
 		$foundUsers = $db->queryDb($connection, $getusers);
 		if(!$foundUsers) {
@@ -36,7 +36,7 @@ class ForumCode
 	}
 	public function get_private_messages($loggedInUser, $selectedUsr) {
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		$getPrivMsgs = "SELECT * FROM private_messages WHERE (sender = '" . $loggedInUser . "' AND receiver = '" . $selectedUsr . "') OR (receiver = '" . $loggedInUser . "' AND sender = '" . $selectedUsr . "')";
 		$result = $db->queryDb($connection, $getPrivMsgs);
 		if (!$result) {
@@ -46,7 +46,7 @@ class ForumCode
 	}
 	public function send_message($sender, $receiver, $msgContents) {
 		$db = new Database();
-		$connection = $db->open_connection("id8787309_betterbook_db");
+		$connection = $db->open_connection("1153791");
 		$msgToSend = isset($msgArray['msgbody']) && !empty($msgArray['msgbody']) ? $msgArray['msgbody'] : null;
 		$sendMsgQuery = "INSERT INTO private_messages (sender, receiver, message_contents, sent_time, opened) VALUES ('" . $sender . "', '" . $receiver . "', '" . $msgContents . "', '" . date('d/m/y H:i:s') . "', '" . 0  . "')";
 		$sendMsgResult = $db->queryDb($connection, $sendMsgQuery);
