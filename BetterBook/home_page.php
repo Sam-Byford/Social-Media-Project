@@ -29,7 +29,7 @@ $objVariable = new Profile();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="css/Header.css">
-<link type="text/css" rel="stylesheet" href="css/home_page.css?version=1">
+<link type="text/css" rel="stylesheet" href="css/home_page.css">
 </head>
 <body>
     <div class="row" id="space30"></div>
@@ -42,24 +42,27 @@ $objVariable = new Profile();
                             echo "<br>";
                             $profileData = $objVariable->get_profile($_SESSION['user_online']);
                             $profile_image = $profileData['profile_picture'];
-                            echo "<div><img class='img-fluid' style='max-width: 80%; height: auto;' src='assets/".$profile_image."'></div>";
+                            echo "<div><img class='img-fluid' id='profileImage' style='max-width: 80%; height: auto;' src='assets/".$profile_image."'></div>";
                             //echo "<div style='background-image: url(assets/".$profile_image.")></div>";
                         ?>
                     </div>
                 </div>
-                <div class="row" id="space30"></div>
                 <div class="row">
-                    <div class="col-12" style="font-size:1.2vw;">
+                    <div class="col-12" id="welcome" style="font-size:1.2vw; padding-top:8px;">
                         <?php
                             $loggedin = True;
                             echo "Welcome " . $profileData['first_name'];
                         ?>
                     </div>
                 </div>
-                <div class="row" id="space30"></div>
+                <div class="row">
+                    <div class="col-12" id="note" style="font-size:1.2vw; padding-top:8px;">
+                        <p>NOTE: If the posts fail to load and/or an error message is present, please refresh the page</p>
+                    </div>
+                </div>
                 <div>
-                    <hr><br>
-                    <p class="fluid-text" style="font-size:1.2vw;">Suggested Job Listings For You</p>
+                    <hr>
+                    <p class="fluid-text" id="suggestedJobsTitle" style="font-size:1.2vw;">Suggested Job Listings For You</p>
                     <?php
                         $sug_jobs_array = array();
                         $url_software = "assets/software.jpg";
@@ -106,7 +109,7 @@ $objVariable = new Profile();
                             {
                                 $url_bck = $url_electronic;
                             }
-                            echo  "<div class='row' style='background-image: url(".$url_bck.");height:20px;'></div><div class='row' style='color:white; font-size:1.2vw; background-color:#591792;'><div class='col-12'>" . $sug_jobs_array[$x]->getTitle() . "<br>" . $sug_jobs_array[$x]->getCompany() . "</div></div><br><br>";   
+                            echo  "<div class='row' id='companiesImg' style='background-image: url(".$url_bck.");height:20px;'></div><div class='row' id='companies' style='color:white; font-size:1.2vw; background-color:#591792;'><div class='col-12'>" . $sug_jobs_array[$x]->getTitle() . "<br>" . $sug_jobs_array[$x]->getCompany() . "</div></div><br><br>";   
                         }    
                     ?>
                     <hr>
@@ -134,18 +137,18 @@ $objVariable = new Profile();
                             //$image = $profile_array;
                             echo"<div style='background-color:#5f0776; color:white'>
                                 <div class='row'>
-                                    <div class='col-2'><img class='img-fluid' style='max-width: 100%;min-width:40px; height: auto;' src='assets/". $img_item ."'></div>
-                                    <div class='col-8 align-middle'  text-md-center' style='font-weight:bold; font-size:1.5vw;'>".$posts_array[$x]->get_post_author()."</div><div class='col-2'></div>
+                                    <div class='col-5'><img class='img-fluid' id='profilePost' style='max-width: 100%;min-width:40px; height: auto;' src='assets/". $img_item ."'></div>
+                                    <div class='col-6 align-middle' id='name'  text-md-center' style='font-weight:bold; font-size:1.5vw; word-break:break-word;'>".$posts_array[$x]->get_post_author()."</div><div class='col-2'></div>
                                 </div>
                                 <br><hr>
                                 <div class='row'>
-                                    <div class='col-12' style='font-weight:bold;font-size:1.5vw;'>".$posts_array[$x]->get_post_title()."</div>
+                                    <div class='col-12' id='postTitle' style='font-weight:bold;font-size:1.5vw;'>".$posts_array[$x]->get_post_title()."</div>
                                 </div>
                                 <br>
                                 <div class='row'>
-                                    <div class='col-12'style='font-size:1.5vw;'>".$posts_array[$x]->get_post_text()."</div>
+                                    <div class='col-12' id='postText' style='font-size:1.5vw;'>".$posts_array[$x]->get_post_text()."</div>
                                 </div><br>
-                            </div><br><br><br><br>"; 
+                            </div><br><br><br>"; 
                         }
                           
                     }

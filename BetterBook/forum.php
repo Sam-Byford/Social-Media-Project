@@ -50,6 +50,7 @@ if(!isset($_SESSION['user_online'])) {
             <!-- Post Content Column -->
             <div class="col-lg-8" id="forumPage" style=" background-color:#5f0776;">
                <h1 class="mt-4">Why Not Try These Chats <i class="fas fa-question"></i></h1>
+               <h4>Note: chats change on page refresh - if you notice a chat missing, refresh the page</h4>
                <hr>
                 <?php 
                   $dailyChats = $dailyChatObj->get_rand_chat();
