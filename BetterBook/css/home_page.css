@@ -13,3 +13,37 @@
     height:20px;
     width:100%;
 }
+
+@media only screen and (max-width: 550px){
+    #welcome{
+        font-size:3vw!important;
+    }
+    #note{
+        font-size:2.5vw!important;
+    }
+    #suggestedJobsTitle{
+        font-size:3vw!important;
+    }
+    #profileImage{
+        max-width:100%!important;
+    }
+    #companies{
+        font-size:2.5vw!important;
+    }
+    #companiesImg{
+        height:50px!important;
+    }
+    #postTitle{
+        font-size:3vw!important;
+    }
+    #postText{
+        font-size:3vw!important;
+    }
+    #profilePost{
+        min-width:80px!important;
+    }
+    #name{
+        font-size:2.5vw!important;
+    }
+}
+
