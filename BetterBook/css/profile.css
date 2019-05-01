@@ -1,9 +1,7 @@
 #Bio:hover{
     cursor:pointer;
 }
-#test{
-    color:green;
-}
+
 #Bio_Div{
     padding-bottom:150px;
 }
@@ -32,5 +30,50 @@
 @media only screen and (min-width:1500px){
     #ProfileContainer{
          max-width:1588px; 
+    }
+}
+@media only screen and (max-width: 430px){
+    #PPImage{
+        max-width:150%!important;
+    }
+    #BTNCONT{
+        font-size:2.5vw!important;
+    }
+    #aboutCONT{
+        padding-left:32px;
+    }
+    #createCONT{
+        
+    }
+    #actCONT{
+        padding-left:25px;
+    }
+    #aboutBTN{
+    width:unset!important;
+    }
+    #Pencil{
+        font-size: 10px!important;
+    }
+    #createBTN{
+        width:150%!important;
+    }
+    #actBTN{
+        width:unset!important;
+    }
+    #aboutTitle{
+        font-size:4vw!important;
+    }
+    #aboutTXT{
+        font-size: 3.5vw!important;
+        word-break:break-word;
+    }
+    #Bio{
+        font-size: 4vw!important;
+    }
+    #Bio_Div p{
+        font-size:3vw!important;
+    }
+    #NameHeader{
+        font-size:4vw!important;
     }
 }
