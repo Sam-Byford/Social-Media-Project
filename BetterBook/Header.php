@@ -26,7 +26,12 @@
     <div class="row">
         <!-- Mobile logo, hidden by default -->
         <div class="logo">
-            <img id="menu" src="assets/logo_transparent.png" alt="logo_menu">
+             <?php
+        session_start();
+        if(isset($_SESSION['user_online'])) {
+            echo '<img id="menu" src="assets/logo_transparent.png" alt="logo_menu">';
+        }
+        ?>
         </div>
         <!-- left side header nav bar -->
         <div class="col" id="links">

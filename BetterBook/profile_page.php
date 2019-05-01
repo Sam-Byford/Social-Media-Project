@@ -45,7 +45,7 @@ if($_SESSION['user_online']) {
 <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/profile.css?version=1">
+        <link rel="stylesheet" href="css/profile.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -79,7 +79,7 @@ if($_SESSION['user_online']) {
                     <?php
                     if(isset($_SESSION['user_online'])) {
                         if($_SESSION['user_online'] == $profileData['email']) {
-                            echo '<img align="left"class="img-fluid" src="assets/' . $profileData['profile_picture'] . '" alt="Me" data-toggle="modal" data-target="#update_profile" id="PPimage">';
+                            echo '<img align="left"class="img-fluid" id="PPImage" src="assets/' . $profileData['profile_picture'] . '" alt="Me" data-toggle="modal" data-targetab="#update_profile" id="PPimage">';
                         } else {
                             echo "<img class='img-fluid' src='assets/" . $profileData['profile_picture'] . "' alt='Me' id='PPimage'>";
                         }
@@ -96,18 +96,18 @@ if($_SESSION['user_online']) {
                             ?>
                         </div>
                     </div>
-                    <div class="row text-center" style="font-size:1.7vw;height:70%;">
-                        <div class="col-4 align-self-end">
+                    <div class="row text-center" id="BTNCONT" style="font-size:1.7vw;height:70%;">
+                        <div class="col-4 align-self-end" id="aboutCONT">
                                 <button id="aboutBTN" style="width:90%;background-color:transparent;color:white;border:none" onclick="about()">About Me</button>
                         </div>
-                        <div class="col-4 align-self-end">
+                        <div class="col-4 align-self-end" id="actCONT">
                             <button id="actBTN" style="width:90%;background-color:transparent;color:white;border:none" onclick="activities()">Activity Feed</button>
                         </div>
-                        <div class="col-4 align-self-end">
+                        <div class="col-4 align-self-end" id="createCONT">
                             <?php
                                 if(isset($_SESSION['user_online'])) {
                                     if($_SESSION['user_online'] == $profileData['email']) {
-                                        echo '<button id="createBTN" style="width:90%;background-color:transparent;color:white;border:none" data-toggle="modal" data-target="#create-post">Create Post <i class="fas fa-pencil-alt"></i></button>';
+                                        echo '<button id="createBTN" style="width:90%;background-color:transparent;color:white;border:none" data-toggle="modal" data-target="#create-post">Create Post <i class="fas fa-pencil-alt" id="Pencil"></i></button>';
                                     }
                                 }
                             ?>
@@ -205,7 +205,7 @@ if($_SESSION['user_online']) {
             echo json_encode($profileData['university']);?>;
         var user_name = <?php echo json_encode($profileData['first_name'])?> + " " + <?php echo json_encode($profileData['last_name'])?>;
         
-        document.getElementById('info_box').innerHTML = "<p style='font-size:2vw;'>About me</p><br><p style='font-size:1.5vw;'>Hi, my name is " + user_name + "<br> I study " + user_course + " at " + user_uni + "<br> My email address is " + user_email + "<p/>";
+        document.getElementById('info_box').innerHTML = "<p id='aboutTitle' style='font-size:2vw;'>About me</p><br><p style='font-size:1.5vw;' id='aboutTXT'>Hi, my name is " + user_name + "<br> I study " + user_course + " at " + user_uni + "<br> My email address is " + user_email + "<p/>";
     }
     about();
     function activities(){
@@ -226,7 +226,7 @@ if($_SESSION['user_online']) {
         for(var x = 0; x < user_posts.length; x++)
         {
             console.log(x);
-            var text = document.getElementById('info_box').innerHTML += "<br><div class='row'><div class='col-12' id='test'><div class='row text-center align-self-center' style='border-radius:12px;height:30px;background-color:#5f0776; text-align:center;color:white'><div class='col-12'>" + user_posts[x].post_title +"</div></div><div class='row text-center align-self-center'><div class='col-12'>"+ user_posts[x].post_text +"</div><hr><div class='col-12'> Post created on - "+ user_posts[x].post_date +"</div></div></div></div><br><hr>";
+            var text = document.getElementById('info_box').innerHTML += "<br><div class='row'><div class='col-12' id='test'><div class='row text-center align-self-center' style='border-radius:12px;height:30px;background-color:#5f0776; text-align:center;color:white'><div class='col-12' style='word-break:break-word;'>" + user_posts[x].post_title +"</div></div><div class='row text-center align-self-center'><div class='col-12' style='word-break:break-word;'>"+ user_posts[x].post_text +"</div><hr><div class='col-12'> Post created on - "+ user_posts[x].post_date +"</div></div></div></div><br><hr>";
         }
     }
 </script>
