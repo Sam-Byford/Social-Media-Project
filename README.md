@@ -10,14 +10,14 @@ The project also provided me with the chance to hugely improve my academic skill
 
 For the assignment we had to provide;
 
-<li>
-<ul>The artefact – The artefact needed to be demonstrated ‘live’ to the first and second markers of each group
-Documentation on the artefact, in written or video form. This included an explanation of why we believed that the artefact achieved the aim set out in the project proposal. We had to answer questions such as; Did successful completion of all objectives lead to achievement of the aim, or were some objectives too challenging? </ul>
-<ul>The report also discussed how the artefact was designed and made and the group processes that led to its production. The purpose of the documentation was to allow someone (e.g. a second marker) with no prior knowledge of the project to understand what we had done, why we did it and what we have achieved.</ul>
-<ul>An explanation of how tools used in the production of the artefact helped to support group processes. This included access to the GitHub repository used by the group and contained evidence of how GitHub was used to establish and maintain source and version control. It also included the use of other tools (e.g. Facebook groups, Dropbox, Google Docs, meeting records, etc.</ul>
-<ul>A critical reflection on group processes. This contained the group’s honest appraisal of the ways in which we worked together and how we might, on reflection, have done things differently.</ul>
-<ul>All group members had to then be present at the artefact demonstration were we answered various questions relating to the artefact.</ul>
-<li>
+<ul>
+<li>The artefact – The artefact needed to be demonstrated ‘live’ to the first and second markers of each group
+Documentation on the artefact, in written or video form. This included an explanation of why we believed that the artefact achieved the aim set out in the project proposal. We had to answer questions such as; Did successful completion of all objectives lead to achievement of the aim, or were some objectives too challenging? </li>
+<li>The report also discussed how the artefact was designed and made and the group processes that led to its production. The purpose of the documentation was to allow someone (e.g. a second marker) with no prior knowledge of the project to understand what we had done, why we did it and what we have achieved.</li>
+<li>An explanation of how tools used in the production of the artefact helped to support group processes. This included access to the GitHub repository used by the group and contained evidence of how GitHub was used to establish and maintain source and version control. It also included the use of other tools (e.g. Facebook groups, Dropbox, Google Docs, meeting records, etc.</li>
+<li>A critical reflection on group processes. This contained the group’s honest appraisal of the ways in which we worked together and how we might, on reflection, have done things differently.</li>
+<li>All group members had to then be present at the artefact demonstration were we answered various questions relating to the artefact.</li>
+</ul>
 
 <h3>Solution</h3>
 
