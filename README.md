@@ -23,6 +23,4 @@ Documentation on the artefact, in written or video form. This included an explan
 
 Site; https://betterbook.000webhostapp.com
 
-GitHub; https://github.com/Sam-Byford/Social-Media-Project
-
 Report; <a href="https://docs.google.com/document/d/1QBMQIPz_trMcna2ht45sYuvGWUlKkKn5U6lZJLxH35E/edit?usp=sharing">Google Docs</a>
