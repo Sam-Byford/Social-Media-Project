@@ -1,6 +1,6 @@
 # Social-Media-Project
 
-Second year group project requiring the creation and implementation of a social media website. For the project our group created a site called ‘BetterBook’ which operated as a more educated orientated Facebook. We took influence from Facebook, The Student Room and LinkedIn and were awarded with a first class grade.
+Second year group project requiring the creation and implementation of a social media website. For the project our group created a site called ‘BetterBook’ which operated as a more educated orientated Facebook. We took influence from Facebook, The Student Room and LinkedIn.
 
 <h3>Task Brief</h3>
 
